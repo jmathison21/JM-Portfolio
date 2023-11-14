@@ -1,0 +1,62 @@
+{
+    "firstname": "Jenna",
+    "lastname": "Mathison",
+    "tabs": [
+        {
+            "name": "Social"
+        },
+        {
+            "name": "Bio"
+        },
+        {
+            "name": "Projects"
+        },
+        {
+            "name": "Resume"
+        }
+    ],
+    "socials": [
+        {
+            "name": "LinkedIn",
+            "link": "",
+            "icon": ""
+        },
+        {
+            "name": "GitHub",
+            "link": "",
+            "icon": ""
+        },
+        {
+            "name": "Instagram",
+            "link": "",
+            "icon": ""
+        }
+    ],
+    "bio": {
+        "biography": "Empty Bio",
+        "picture": ""
+    },
+    "projects": [
+        {
+            "name": "",
+            "picture": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "picture": "",
+            "description": ""
+        },
+        {
+            "name": "",
+            "picture": "",
+            "description": ""
+        }
+    ],
+    "resume": {
+        "name": "",
+        "link": "",
+        "icon": "",
+        "modDate": ""
+    }
+}

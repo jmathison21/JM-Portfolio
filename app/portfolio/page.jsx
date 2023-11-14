@@ -1,7 +1,4 @@
-export const metadata = {
-  title: 'Jenna Mathison',
-}
-
+//React Components
 function Header() {
   return (
     <div>
@@ -38,11 +35,25 @@ function Content() {
   );
 }
 
-export default function Page() {
+
+
+//Fetch jennaDB
+async function getDB() {
+  const res = await fetch("http://localhost:3000/jennaDB.json")
+  const data = res.json()
+  return data
+}
+
+
+//Page Export function
+export default async function Page() {
+  const db = getDB()
+  console.log(db)
+
   return (
-    <div>
+    <main>
       <Header />
       <Content />
-    </div>
+    </main>
   );
 }
