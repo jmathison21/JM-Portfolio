@@ -1,3 +1,10 @@
+//Fetch jennaDB
+async function getDB() {
+  return await fetch("http://localhost:3000/jennaDB.json").then(res => res.json())
+}
+const db = await getDB()
+
+
 //React Components
 function Header() {
   return (
@@ -8,7 +15,7 @@ function Header() {
   }
 
 function Tabs() {
-  const tabs = ["Socials","Projects","Experience","Education","Skills"]
+  const tabs = db.tabs.map(tab => tab.name)
   return (
     <div>
       {tabs.map((name) => {
@@ -35,21 +42,8 @@ function Content() {
   );
 }
 
-
-
-//Fetch jennaDB
-async function getDB() {
-  const res = await fetch("http://localhost:3000/jennaDB.json")
-  const data = res.json()
-  return data
-}
-
-
 //Page Export function
 export default async function Page() {
-  const db = getDB()
-  console.log(db)
-
   return (
     <main>
       <Header />
