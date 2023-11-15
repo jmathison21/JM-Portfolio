@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
-import db from "jennaDB.js"
+import db from "src/jennaDB.js"
 
 
 function Header() {
@@ -33,7 +33,7 @@ function Content() {
   );
 }
 
-export default async function Page() {
+export default function Page() {
   return (
     <main>
       <Header />

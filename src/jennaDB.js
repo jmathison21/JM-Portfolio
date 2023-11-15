@@ -1,4 +1,4 @@
-import db from "jennaDB.json"
+import db from "./jennaDB.json"
 
 const jdb = {
     getTabs: function() {
