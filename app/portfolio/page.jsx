@@ -1,8 +1,12 @@
+
+import Tabs from "./tabs.jsx"
+
 //Fetch jennaDB
-async function getDB() {
+import db from "/jennaDB.json"
+/*async function getDB() {
   return await fetch("http://localhost:3000/jennaDB.json").then(res => res.json())
 }
-const db = await getDB()
+const db = await getDB()*/
 
 
 //React Components
@@ -14,17 +18,6 @@ function Header() {
   );
   }
 
-function Tabs() {
-  const tabs = db.tabs.map(tab => tab.name)
-  return (
-    <div>
-      {tabs.map((name) => {
-        return (<button>{name}</button>)
-      })}
-    </div>
-  );
-}
-
 function View() {
   return (
     <div>
@@ -34,9 +27,14 @@ function View() {
 }
 
 function Content() {
+  const tabs = db.tabs.map(tab => tab.name)
+  console.log(tabs)
+
+  const tabState = tabs[0]
+
   return (
     <div>
-      <Tabs />
+      <Tabs names={tabs}/>
       <View />
     </div>
   );
