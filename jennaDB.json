@@ -15,7 +15,7 @@
             "name": "Resume"
         }
     ],
-    "socials": [
+    "Social": [
         {
             "name": "LinkedIn",
             "link": "",
@@ -32,11 +32,11 @@
             "icon": ""
         }
     ],
-    "bio": {
+    "Bio": {
         "biography": "Empty Bio",
         "picture": ""
     },
-    "projects": [
+    "Projects": [
         {
             "name": "",
             "picture": "",
@@ -53,7 +53,7 @@
             "description": ""
         }
     ],
-    "resume": {
+    "Resume": {
         "name": "",
         "link": "",
         "icon": "",
