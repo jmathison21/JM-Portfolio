@@ -21,9 +21,11 @@ function Social() {
 
   const socialItems = socials.map((social) => {
     return (
-      <li key={social.name}>
-        <Image width={100} height={100} src={social.icon} alt={social["icon-alt"]} />
-        <Link href={social.link}>{social.name}</Link>
+      <li key={social.name} >
+        <div className="flex flex-row items-center">
+          <Image width={100} height={100} src={social.icon} alt={social["icon-alt"]} />
+          <Link href={social.link}>{social.name}</Link>
+        </div>
       </li>
     )})
 
@@ -48,7 +50,7 @@ function Resume () {
 //Page Components
 function Header() {
   return (
-    <div>
+    <div className="w-3/5">
       <h1>Jenna Mathison</h1>
     </div>
   );
@@ -66,7 +68,7 @@ function Content() {
   const tabs = tabsList.map(name => <button key={name} onClick={() => {setTab(name)}}>{name}</button>)
 
   return (
-    <div>
+    <div className="w-3/5">
       <div>{tabs}</div>
       <div><View tab={tab} /></div>
     </div>
@@ -75,7 +77,7 @@ function Content() {
 
 export default function Page() {
   return (
-    <main>
+    <main className="flex flex-col justify-center items-center">
       <Header />
       <Content />
     </main>
