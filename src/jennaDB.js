@@ -6,6 +6,9 @@ const jdb = {
     },
     getTabContent: function(tab) {
         return "none"
+    },
+    getImageURL: function(imageName)  {
+        return ""
     }
 }
 
