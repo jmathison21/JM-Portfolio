@@ -18,7 +18,6 @@ const tabComponents = {
 
 function Social() {
   const [socials,setSocials] = useState(db.getSocial())
-  console.log(socials)
 
   const socialItems = socials.map((social) => {
     return (

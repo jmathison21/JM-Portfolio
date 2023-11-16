@@ -1,4 +1,6 @@
+import { Analytics } from '@vercel/analytics/react';
 import "./global.css"
+
 
 export const metadata = {
   title: 'Jenna Mathison',
@@ -7,7 +9,10 @@ export const metadata = {
 export default function PortfolioLayout({ children }) {
     return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
     );
   }
