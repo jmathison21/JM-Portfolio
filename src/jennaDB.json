@@ -19,46 +19,56 @@
         {
             "name": "LinkedIn",
             "link": "https://www.linkedin.com/in/jmathison21/",
-            "icon": "img/linkedin_icon.png"
+            "icon": "/img/linkedin_icon.png",
+            "icon-alt": "linkedin icon"
         },
         {
             "name": "GitHub",
             "link": "https://github.com/jmathison21",
-            "icon": "img/github_icon.png"
+            "icon": "/img/github_icon.png",
+            "icon-alt": "github icon"
         },
         {
             "name": "Instagram",
             "link": "https://www.instagram.com/jmathison2118/",
-            "icon": "img/Instagram_icon.png.webp"
+            "icon": "/img/Instagram_icon.png.webp",
+            "icon-alt": "instagram icon"
         }
     ],
     "Bio": {
         "biography": "This is a Placeholder Biography Paragraph. No Picture is present either...",
         "picture": "",
-        "no-picture": "img/person-placeholder-image.png"
+        "picture-alt": "",
+        "no-picture": "/img/person-placeholder-image.png",
+        "no-picture-alt": "gray placeholder person image"
     },
     "Projects": [
         {
             "name": "",
             "picture": "",
+            "picture-alt": "",
             "description": ""
         },
         {
             "name": "",
             "picture": "",
+            "picture-alt": "",
             "description": ""
         },
         {
             "name": "",
             "picture": "",
+            "picture-alt": "",
             "description": ""
         }
     ],
     "Resume": {
         "name": "Jenna Mathison Resume",
         "link": "",
-        "icon-pdf": "img/pdf_icon.png",
-        "icon-word": "img/docx_icon.png",
+        "icon-pdf": "/img/pdf_icon.png",
+        "icon-pdf-alt": "pdf file icon",
+        "icon-docx": "/img/docx_icon.png",
+        "icon-docx-alt": "docx file icon",
         "modDate": ""
     }
 }

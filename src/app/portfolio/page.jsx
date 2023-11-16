@@ -1,6 +1,11 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useState} from "react";
+import Image from "next/image"
+import Link from "next/link"
 import db from "src/jennaDB.js"
+
+//const cachedTabs = cache(db.getTabs())
+//const cachedSocials = cache(db.getSocial())
 
 
 //Tab Componenent Functions
@@ -12,7 +17,20 @@ const tabComponents = {
 }
 
 function Social() {
-  return(<p>Empty Social</p>)
+  const [socials,setSocials] = useState(db.getSocial())
+  console.log(socials)
+
+  const socialItems = socials.map((social) => {
+    return (
+      <li key={social.name}>
+        <Image width={100} height={100} src={social.icon} alt={social["icon-alt"]} />
+        <Link href={social.link}>{social.name}</Link>
+      </li>
+    )})
+
+  return(
+      <ul>{socialItems}</ul>
+  )
 }
 
 function Bio() {
