@@ -21,16 +21,19 @@ function Social() {
 
   const socialItems = socials.map((social) => {
     return (
-      <li key={social.name} >
+      <li key={social.name} className="p-2">
         <div className="flex flex-row items-center">
           <Image width={100} height={100} src={social.icon} alt={social["icon-alt"]} />
-          <Link href={social.link}>{social.name}</Link>
+          <Link className="pl-8 "href={social.link}>{social.name}</Link>
         </div>
       </li>
     )})
 
   return(
-      <ul>{socialItems}</ul>
+    <div className="flex flex-col items-center">
+      <h2 classname="text-center p-4 font-bold text-lg">Social Media</h2>
+      <ul className="">{socialItems}</ul>
+    </div>
   )
 }
 
@@ -50,8 +53,8 @@ function Resume () {
 //Page Components
 function Header() {
   return (
-    <div className="w-3/5">
-      <h1>Jenna Mathison</h1>
+    <div className="w-full min-w-fit">
+      <h1 className="w-f text-center text-4xl font-bold p-12 pb-16 whitespace-nowrap">Jenna Mathison</h1>
     </div>
   );
 }
@@ -65,11 +68,11 @@ function View({tab}) {
 function Content() {
   const tabsList = db.getTabs()
   const [tab,setTab] = useState(tabsList[0])
-  const tabs = tabsList.map(name => <button key={name} onClick={() => {setTab(name)}}>{name}</button>)
+  const tabs = tabsList.map(name => <button className="m-2 font-bold flex-grow text-sm md:text-lg  before:text-center bg-slate-100 rounded-xl " key={name} onClick={() => {setTab(name)}}>{name}</button>)
 
   return (
-    <div className="w-3/5">
-      <div>{tabs}</div>
+    <div className="flex flex-col w-full pt-2 items-center">
+      <div className="flex flex-row flex-grow min-h-max w-4/5 md:w-3/5 max-w-xl justify-center p-2">{tabs}</div>
       <div><View tab={tab} /></div>
     </div>
   );
@@ -77,7 +80,7 @@ function Content() {
 
 export default function Page() {
   return (
-    <main className="flex flex-col justify-center items-center">
+    <main className="flex flex-col items-center h-screen">
       <Header />
       <Content />
     </main>
