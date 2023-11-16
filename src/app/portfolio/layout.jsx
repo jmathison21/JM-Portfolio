@@ -1,5 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
-import "./global.css"
+import "./globals.css"
 
 
 export const metadata = {
@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function PortfolioLayout({ children }) {
     return (
-    <html lang="en">
-      <body>
+    <html lang="en" >
+      <body className="bg-rose-300 min-w-fit">
         {children}
         <Analytics />
       </body>
