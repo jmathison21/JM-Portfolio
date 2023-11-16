@@ -9,7 +9,7 @@ export const metadata = {
 export default function PortfolioLayout({ children }) {
     return (
     <html lang="en" >
-      <body className="bg-rose-300 min-w-fit">
+      <body className="bg-rose-300 min-w-fit h-screen">
         {children}
         <Analytics />
       </body>
