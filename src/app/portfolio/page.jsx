@@ -31,7 +31,7 @@ function Social() {
 
   return(
     <div className="flex flex-col items-center">
-      <h2 classname="text-center p-4 font-bold text-lg">Social Media</h2>
+      <h2 className="text-center p-4 font-bold text-xl ">Social Media</h2>
       <ul className="">{socialItems}</ul>
     </div>
   )
@@ -54,7 +54,7 @@ function Resume () {
 function Header() {
   return (
     <div className="w-full min-w-fit">
-      <h1 className="w-f text-center text-4xl font-bold p-12 pb-16 whitespace-nowrap">Jenna Mathison</h1>
+      <h1 className="w-f text-center text-4xl font-bold p-10 md:pb-14 whitespace-nowrap">Jenna Mathison</h1>
     </div>
   );
 }
@@ -68,7 +68,7 @@ function View({tab}) {
 function Content() {
   const tabsList = db.getTabs()
   const [tab,setTab] = useState(tabsList[0])
-  const tabs = tabsList.map(name => <button className="m-2 font-bold flex-grow text-sm md:text-lg  before:text-center bg-slate-100 rounded-xl " key={name} onClick={() => {setTab(name)}}>{name}</button>)
+  const tabs = tabsList.map(name => <button className="m-2 font-bold flex-grow text-md md:text-xl p-1 before:text-center bg-slate-100 rounded-xl " key={name} onClick={() => {setTab(name)}}>{name}</button>)
 
   return (
     <div className="flex flex-col w-full pt-2 items-center">
