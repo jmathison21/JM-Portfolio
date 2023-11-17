@@ -21,10 +21,10 @@ function Social() {
 
   const socialItems = socials.map((social) => {
     return (
-      <li key={social.name} className="p-2">
+      <li key={social.name} className="p-3">
         <div className="flex flex-row items-center">
           <Image width={100} height={100} src={social.icon} alt={social["icon-alt"]} />
-          <Link className="pl-8 "href={social.link}>{social.name}</Link>
+          <Link className="pl-8 text-2xl text-blue-500"href={social.link}>{social.name}</Link>
         </div>
       </li>
     )})
@@ -68,12 +68,14 @@ function View({tab}) {
 function Content() {
   const tabsList = db.getTabs()
   const [tab,setTab] = useState(tabsList[0])
-  const tabs = tabsList.map(name => <button className="m-2 font-bold flex-grow text-md md:text-xl p-1 before:text-center bg-slate-100 rounded-xl " key={name} onClick={() => {setTab(name)}}>{name}</button>)
+  const tabs = tabsList.map(name => <button className="m-1 md:m-2 font-bold flex-grow text-md md:text-xl  p-1 lg:px-3 text-center bg-slate-100 rounded-xl shadow-sm" key={name} onClick={() => {setTab(name)}}>{name}</button>)
 
   return (
-    <div className="flex flex-col w-full pt-2 items-center">
-      <div className="flex flex-row flex-grow min-h-max w-4/5 md:w-3/5 max-w-xl justify-center p-2">{tabs}</div>
-      <div><View tab={tab} /></div>
+    <div className="w-full flex flex-col items-center">
+      <div className="flex flex-col w-5/6 md:w-3/5 lg:w-1/2 p-1 pt-1 items-center bg-rose-200 rounded-xl shadow-md">
+        <div className="flex flex-row flex-grow min-h-max min-w-fit w-4/5 md:w-4/5 lg:w-3/5  max-w-xl justify-center p-2 rounded-xl">{tabs}</div>
+        <div className="w-full pb-6 px-6"><View tab={tab} /></div>
+      </div>
     </div>
   );
 }
