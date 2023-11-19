@@ -4,8 +4,8 @@ const jdb = {
     getTabs: function() {
         return db.tabs.map(tab => tab.name)
     },
-    getSocial: function() {
-        return db.Social
+    getTabContent: function(tab) {
+        return db[tab]
     }
 }
 

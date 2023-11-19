@@ -17,7 +17,7 @@ const tabComponents = {
 }
 
 function Social() {
-  const [socials,setSocials] = useState(db.getSocial())
+  const [socials,setSocials] = useState(db.getTabContent("Social"))
 
   const socialItems = socials.map((social) => {
     return (
@@ -38,7 +38,36 @@ function Social() {
 }
 
 function Bio() {
-  return(<p>Empty Bio</p>)
+  const [bio, setBio] = useState(db.getTabContent("Bio"))
+
+  let imgSrc = ""
+  let imgAlt = ""
+  if (bio.picture != "") {
+    imgSrc = bio["picture"]
+    imgAlt = bio["picture-alt"]
+  } else {
+    imgSrc = bio["no-picture"]
+    imgAlt = bio["no-picture-alt"]
+  }
+
+  return(
+    <div className="flex flex-row flex-grow flex-wrap w-full md:w-4/5 justify-center pt-6">
+      <Image src={imgSrc} alt={imgAlt} width={180} height={180} />
+      <div className="w-1/2 flex flex-col items-center p-2 px-5">
+        <p className="text-lg font-bold text-center">Biography</p>
+        <p className="text-justify">{bio.biography}</p>
+      </div>
+      <div className="flex flex-col items-center p-2">
+        <p className="text-lg font-bold text-center">Current Job</p>
+        <p className="w-4/6 text-center">{bio.work}</p>
+      </div>
+      <div className="flex flex-col items-center p-2 lg:w-4/5">
+        <p className="text-lg font-bold text-center">Education</p>
+        <p className="text-center">{bio.education}</p>
+      </div>
+    </div>
+  //<p>Empty Bio</p>
+  )
 }
 
 function Projects() {
@@ -74,7 +103,7 @@ function Content() {
     <div className="w-full flex flex-col items-center">
       <div className="flex flex-col w-5/6 md:w-3/5 lg:w-1/2 p-1 pt-1 items-center bg-rose-200 rounded-xl shadow-md">
         <div className="flex flex-row flex-grow min-h-max min-w-fit w-4/5 md:w-4/5 lg:w-3/5  max-w-xl justify-center p-2 rounded-xl">{tabs}</div>
-        <div className="w-full pb-6 px-6"><View tab={tab} /></div>
+        <div className="flex flex-col items-center w-full pb-6 px-6"><View tab={tab} /></div>
       </div>
     </div>
   );

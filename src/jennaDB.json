@@ -37,6 +37,8 @@
     ],
     "Bio": {
         "biography": "This is a Placeholder Biography Paragraph. No Picture is present either...",
+        "work": "Computer Consultant II at University of Michigan-Dearborn",
+        "education": "Bachelor of Science - Computer Information Science  \nUniversity of Michigan-Dearborn\nGraduating Winter 2024 - 3.97 GPA",
         "picture": "",
         "picture-alt": "",
         "no-picture": "/img/person-placeholder-image.png",
