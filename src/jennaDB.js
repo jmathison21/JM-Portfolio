@@ -5,7 +5,12 @@ const jdb = {
         return db.tabs.map(tab => tab.name)
     },
     getTabContent: function(tab) {
-        return db[tab]
+        for (let i = 0; i < db.tabs.length; i++) {
+            if (db.tabs[i].name === tab) {
+                return db.tabs[i].content
+            }
+        }
+        return "Tab Not Found"
     }
 }
 

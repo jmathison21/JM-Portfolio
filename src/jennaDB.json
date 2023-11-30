@@ -3,74 +3,72 @@
     "lastname": "Mathison",
     "tabs": [
         {
-            "name": "Social"
+            "name": "About",
+            "content": {
+                "Bio": {
+                    "about": "This is a Placeholder Biography Paragraph. No Picture is present either...",
+                    "work": "Computer Consultant II at University of Michigan-Dearborn",
+                    "education": "Bachelor of Science - Computer Information Science  \nUniversity of Michigan-Dearborn\nGraduating Winter 2024 - 3.97 GPA",
+                    "picture": "",
+                    "picture-alt": "",
+                    "no-picture": "/img/person-placeholder-image.png",
+                    "no-picture-alt": "gray placeholder person image"
+                },
+                "Social": [
+                    {
+                        "name": "LinkedIn",
+                        "link": "https://www.linkedin.com/in/jmathison21/",
+                        "icon": "/img/linkedin_icon.png",
+                        "icon-alt": "linkedin icon"
+                    },
+                    {
+                        "name": "GitHub",
+                        "link": "https://github.com/jmathison21",
+                        "icon": "/img/github_icon.png",
+                        "icon-alt": "github icon"
+                    },
+                    {
+                        "name": "Instagram",
+                        "link": "https://www.instagram.com/jmathison2118/",
+                        "icon": "/img/Instagram_icon.png.webp",
+                        "icon-alt": "instagram icon"
+                    }
+                ],
+                "Resume": {
+                    "name": "Jenna Mathison Resume",
+                    "link": "",
+                    "icon-pdf": "/img/pdf_icon.png",
+                    "icon-pdf-alt": "pdf file icon",
+                    "icon-docx": "/img/docx_icon.png",
+                    "icon-docx-alt": "docx file icon",
+                    "modDate": ""
+                }
+            }
         },
         {
-            "name": "Bio"
-        },
-        {
-            "name": "Projects"
-        },
-        {
-            "name": "Resume"
+            "name": "Projects",
+            "content": {
+                "Projects": [
+                    {
+                        "name": "Translation Networks",
+                        "picture": "",
+                        "picture-alt": "",
+                        "description": "",
+                        "content": {
+
+                        }
+                    },
+                    {
+                        "name": "Stock Trading Application",
+                        "picture": "",
+                        "picture-alt": "",
+                        "description": "",
+                        "content": {
+
+                        }
+                    }
+                ]
+            }
         }
-    ],
-    "Social": [
-        {
-            "name": "LinkedIn",
-            "link": "https://www.linkedin.com/in/jmathison21/",
-            "icon": "/img/linkedin_icon.png",
-            "icon-alt": "linkedin icon"
-        },
-        {
-            "name": "GitHub",
-            "link": "https://github.com/jmathison21",
-            "icon": "/img/github_icon.png",
-            "icon-alt": "github icon"
-        },
-        {
-            "name": "Instagram",
-            "link": "https://www.instagram.com/jmathison2118/",
-            "icon": "/img/Instagram_icon.png.webp",
-            "icon-alt": "instagram icon"
-        }
-    ],
-    "Bio": {
-        "biography": "This is a Placeholder Biography Paragraph. No Picture is present either...",
-        "work": "Computer Consultant II at University of Michigan-Dearborn",
-        "education": "Bachelor of Science - Computer Information Science  \nUniversity of Michigan-Dearborn\nGraduating Winter 2024 - 3.97 GPA",
-        "picture": "",
-        "picture-alt": "",
-        "no-picture": "/img/person-placeholder-image.png",
-        "no-picture-alt": "gray placeholder person image"
-    },
-    "Projects": [
-        {
-            "name": "",
-            "picture": "",
-            "picture-alt": "",
-            "description": ""
-        },
-        {
-            "name": "",
-            "picture": "",
-            "picture-alt": "",
-            "description": ""
-        },
-        {
-            "name": "",
-            "picture": "",
-            "picture-alt": "",
-            "description": ""
-        }
-    ],
-    "Resume": {
-        "name": "Jenna Mathison Resume",
-        "link": "",
-        "icon-pdf": "/img/pdf_icon.png",
-        "icon-pdf-alt": "pdf file icon",
-        "icon-docx": "/img/docx_icon.png",
-        "icon-docx-alt": "docx file icon",
-        "modDate": ""
-    }
+    ]
 }
