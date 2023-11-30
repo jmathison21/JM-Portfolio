@@ -57,8 +57,7 @@ function Resume ({Resume}) {
 function About() {
     const [content, setContent] = useState(db.getTabContent("About"))
 
-    return (
-    <>
+    return (<>
         <Bio Bio={content.Bio}/>
         <Social Social={content.Social}/>
         <Resume Resume={content.Resume}/>
