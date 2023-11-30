@@ -2,7 +2,6 @@
 import {useState} from "react";
 import Image from "next/image"
 import Link from "next/link"
-import db from "src/jennaDB.js"
 
 
 function Social({Social}) {
@@ -54,8 +53,10 @@ function Resume ({Resume}) {
     return(<p>Empty Resume</p>)
 }
 
-function About() {
-    const [content, setContent] = useState(db.getTabContent("About"))
+function About({content}) {
+    if (content == "") {
+        return (<p>content not found</p>)
+    }
 
     return (<>
         <Bio Bio={content.Bio}/>
@@ -66,5 +67,5 @@ function About() {
 
 
 export default function Page() {
-    return (<About />)
+    return (<About content={""}/>)
 }
