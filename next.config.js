@@ -6,6 +6,11 @@ const nextConfig = {
                 source: '/portfolio',
                 destination: '/about',
                 permanent: true,
+            },
+            {
+                source: '/',
+                destination: '/about',
+                permanent: true,
             }
         ]
     },

@@ -1,7 +1,7 @@
 import "./globals.css"
 import { Analytics } from '@vercel/analytics/react';
 import db from "src/jennaDB.js"
-import Tabs from "./Tabs.jsx"
+import Tabs from "./Tabs"
 
 
 export const metadata = {

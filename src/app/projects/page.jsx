@@ -1,32 +1,32 @@
-"use client"
-import {useState} from "react";
-import Image from "next/image"
-import Link from "next/link"
-
-function Project({project}) {
-    return (
-        <div>
-            <Image src={project.picture} alt={project["picture-alt"]} width={200} height={200}/>
-            <h2>{project.name}</h2>
-            <p>{project.description}</p>
-        </div>
-    )
-}
+import Project from "./Project"
 
 function Projects({content}) {
-    if(content == "") {
+    if(content["ok"] == false) {
         return <p>content not found</p>
     }
 
     const projects = content.map((project) => {<Project project={project} />})
 
-    return (<div>
+    return (<ul>
         {projects}
-    </div>)
+    </ul>)
 }
 
+async function getContent(page) {
+    let baseURL = "http://" + process.env.HOSTNAME
+    process.env.PORT == 3000 ? baseURL = baseURL + ":" + process.env.PORT : Null
+    const res = await fetch(new URL("/api", baseURL), {headers: {query:"content", page: page}})
 
-export default function Page({content}) {
+    if(!res.ok) {
+        return {"ok": false}
+    } 
 
-    return (<Projects content={""}/>)
+    return res.json().content
+}
+
+export default async function Page() {
+    const content = await getContent("Projects")
+    console.log(content)
+
+    return (<Projects content={content}/>)
 }
