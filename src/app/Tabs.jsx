@@ -3,6 +3,7 @@ import { useState} from "react";
 import Link from "next/link"
 
 export default function Tabs({tabsList}) {
+    tabsList = tabsList != undefined ? tabsList : ["None"]
     const [tab,setTab] = useState(tabsList[0])
     const tabs = tabsList.map(name => <Link className="m-1 md:m-2 font-bold flex-grow text-md md:text-xl  p-1 lg:px-3 text-center bg-slate-100 rounded-xl shadow-sm" key={name} href={"/" +  name.toLowerCase()} onClick={() => {setTab(name)}}>{name}</Link>)
     

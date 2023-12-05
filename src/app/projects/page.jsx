@@ -1,7 +1,7 @@
 import Project from "./Project"
 
 function Projects({content}) {
-    if(content["ok"] == false) {
+    if(content == undefined) {
         return <p>content not found</p>
     }
 
@@ -18,15 +18,15 @@ async function getContent(page) {
     const res = await fetch(new URL("/api", baseURL), {headers: {query:"content", page: page}})
 
     if(!res.ok) {
-        return {"ok": false}
+        return undefined
     } 
 
-    return res.json().content
+    return res.json().body
 }
 
-export default async function Page() {
-    const content = await getContent("Projects")
-    console.log(content)
+export default function Page() {
+    const content = getContent("Projects")
+    console.log("content", content)
 
     return (<Projects content={content}/>)
 }

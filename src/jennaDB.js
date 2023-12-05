@@ -2,7 +2,8 @@ import db from "./jennaDB.json"
 
 const jdb = {
     getTabs: function() {
-        return db.tabs.map(tab => tab.name)
+        const tabs = db.tabs.map(tab => tab.name)
+        return tabs
     },
     getTabContent: function(tab) {
         for (let i = 0; i < db.tabs.length; i++) {
@@ -10,7 +11,7 @@ const jdb = {
                 return db.tabs[i].content
             }
         }
-        return "Tab Not Found"
+        return "Content Not Found"
     }
 }
 

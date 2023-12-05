@@ -23,8 +23,8 @@ function Socials({socials}) {
 }
   
 function Bio({bio}) {
-    const imgSrc = bio.picture != "" ? bio["picture"] : bio["no-picture"]
-    const imgAlt = bio.picture != "" ? bio["picture-alt"] : bio["no-picture-alt"]
+    const imgSrc = bio["picture"] != "" ? bio["picture"] : bio["no-picture"]
+    const imgAlt = bio["picture"] != "" ? bio["picture-alt"] : bio["no-picture-alt"]
   
     return(
     <div className="flex flex-row flex-grow flex-wrap w-full md:w-4/5 justify-center pt-6">
@@ -49,7 +49,7 @@ function Resume ({resume}) {
 }
 
 function About({content}) {
-    if (content["ok"] == false){
+    if (content == undefined){
         return (<p>content not found</p>)
     }
 
@@ -63,18 +63,23 @@ function About({content}) {
 async function getContent(page) {
     let baseURL = "http://" + process.env.HOSTNAME
     process.env.PORT == 3000 ? baseURL = baseURL + ":" + process.env.PORT : Null
-    const res = await fetch(new URL("/api", baseURL), {headers: {query:"content", page: page}})
+
+    const fetchURL = new URL("/api", baseURL)
+    fetchURL.searchParams.append("query","content")
+    fetchURL.searchParams.append("page", page)
+
+    const res = await fetch(fetchURL, {cache: "no-store"})
 
     if(!res.ok) {
-        return JSON({"ok": false})
+        return undefined
     } 
 
-    return res.json().content
+    return await res.json()
 }
 
 export default async function Page() {
     const content = await getContent("About")
-    console.log(content)
-
-    return (<About content={content}/>)
+    
+    
+    return (<About content={undefined}/>)
 }
