@@ -6,9 +6,9 @@ function Projects({content}) {
         return <p>content not found</p>
     }
 
-    const projects = content.Projects.map((project) => {<Project project={project} />})
+    const projects = content.Projects.map((project) => {return <Project project={project} key={project.name}/>})
 
-    return (<ul>
+    return (<ul className="space-y-4">
         {projects}
     </ul>)
 }
