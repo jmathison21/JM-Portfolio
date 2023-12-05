@@ -1,7 +1,8 @@
 import Project from "./Project"
+import db from "src/jennaDB"
 
 function Projects({content}) {
-    if(content == undefined) {
+    if(content == null) {
         return <p>content not found</p>
     }
 
@@ -12,25 +13,8 @@ function Projects({content}) {
     </ul>)
 }
 
-async function getContent(page) {
-    let baseURL = "http://" + process.env.HOSTNAME
-    process.env.PORT == 3000 ? baseURL = baseURL + ":" + process.env.PORT : Null
-
-    const fetchURL = new URL("/api", baseURL)
-    fetchURL.searchParams.append("query","content")
-    fetchURL.searchParams.append("page", page)
-
-    const res = await fetch(fetchURL, {cache: "no-store"})
-
-    if(!res.ok) {
-        return undefined
-    } 
-
-    return await res.json()
-}
-
 export default async function Page() {
-    const data = await getContent("Projects")
+    const data = await db.getTabContent("Projects")
 
     return (<Projects content={data}/>)
 }

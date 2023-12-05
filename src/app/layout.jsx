@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Analytics } from '@vercel/analytics/react';
 import Tabs from "./Tabs"
+import db from "src/jennaDB"
 
 
 export const metadata = {
@@ -14,26 +15,8 @@ function Header() {
     </div>)
 }
 
-async function getTabs() {
-    let baseURL = "http://" + process.env.HOSTNAME
-    process.env.PORT == 3000 ? baseURL = baseURL + ":" + process.env.PORT : Null
-
-    const fetchURL = new URL("/api", baseURL)
-    fetchURL.searchParams.append("query","tabs")
-
-    const res = await fetch(fetchURL,{cache: "no-store"})
-
-    if(!res.ok) {
-        return undefined
-    } 
-
-    return await res.json()
-}
-
-
 export default async function RootLayout({ children }) {
-    //Get page tabs from db to pass to Tabs componenet
-    const tabsList = await getTabs()
+    const tabsList = await db.getTabs()
     
     return (
     <html lang="en" >

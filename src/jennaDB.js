@@ -1,4 +1,14 @@
-import db from "./jennaDB.json"
+async function getDB() {
+    const res = await fetch(process.env.NEXT_PUBLIC_DB_URL, {headers: {"Content-Type": "application/json", "Accept": "application/json"}, cache: "no-store"})
+
+    if(!res.ok) {
+        return null
+    }
+
+    return await res.json()
+}
+
+const db = await getDB()
 
 const jdb = {
     getTabs: function() {
@@ -12,6 +22,9 @@ const jdb = {
             }
         }
         return "Content Not Found"
+    },
+    getDB: function() {
+        return db
     }
 }
 

@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import db from "src/jennaDB"
 
 function Social({social}) {
     return(
@@ -24,11 +25,11 @@ function Socials({socials}) {
   
 function Bio({bio}) {
     const imgSrc = bio.picture != "" ? bio["picture"] : bio["no-picture"]
-    const imgAlt = bio["picture"] != "" ? bio["picture-alt"] : bio["no-picture-alt"]
+    const imgAlt = bio.picture != "" ? bio["picture-alt"] : bio["no-picture-alt"]
   
     return(
     <div className="flex flex-row flex-grow flex-wrap w-full md:w-4/5 justify-center pt-6">
-        <Image src={imgSrc} alt={imgAlt} width={180} height={180} />
+        <div className="w-1/2"><Image src={imgSrc} alt={imgAlt} width={0} height={0} priority={true} sizes="100vw" className="w-full h-auto"/></div>
         <div className="w-1/2 flex flex-col items-center p-2 px-5">
             <p className="text-lg font-bold text-center">About Me</p>
             <p className="text-left">{bio.about}</p>
@@ -49,7 +50,7 @@ function Resume ({resume}) {
 }
 
 function About({content}) {
-    if (content == undefined){
+    if (content == null){
         return (<p>content not found</p>)
     }
 
@@ -60,25 +61,8 @@ function About({content}) {
     </>)
 }
 
-async function getContent(page) {
-    let baseURL = "http://" + process.env.HOSTNAME
-    process.env.PORT == 3000 ? baseURL = baseURL + ":" + process.env.PORT : Null
-
-    const fetchURL = new URL("/api", baseURL)
-    fetchURL.searchParams.append("query","content")
-    fetchURL.searchParams.append("page", page)
-
-    const res = await fetch(fetchURL, {cache: "no-store"})
-
-    if(!res.ok) {
-        return undefined
-    } 
-
-    return await res.json()
-}
-
 export default async function Page() {
-    const data = await getContent("About")
+    const data = await db.getTabContent("About")
     
     return (<About content={data}/>)
 }
