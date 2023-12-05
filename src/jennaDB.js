@@ -1,5 +1,6 @@
 async function getDB() {
-    const res = await fetch(process.env.NEXT_PUBLIC_DB_URL, {headers: {"Content-Type": "application/json", "Accept": "application/json"}, cache: "no-store"})
+    const revalidate = process.env.NEXT_PUBLIC_VERCEL_ENV === "development" ? 0 : 3600
+    const res = await fetch(process.env.NEXT_PUBLIC_DB_URL, {headers: {"Content-Type": "application/json", "Accept": "application/json"}, next:{revalidate: revalidate}})
 
     if(!res.ok) {
         return null
