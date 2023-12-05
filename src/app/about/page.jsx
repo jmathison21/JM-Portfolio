@@ -23,7 +23,7 @@ function Socials({socials}) {
 }
   
 function Bio({bio}) {
-    const imgSrc = bio["picture"] != "" ? bio["picture"] : bio["no-picture"]
+    const imgSrc = bio.picture != "" ? bio["picture"] : bio["no-picture"]
     const imgAlt = bio["picture"] != "" ? bio["picture-alt"] : bio["no-picture-alt"]
   
     return(
@@ -54,9 +54,9 @@ function About({content}) {
     }
 
     return (<>
-        <Bio Bio={content.Bio}/>
-        <Social Social={content.Social}/>
-        <Resume Resume={content.Resume}/>
+        <Bio bio={content.Bio}/>
+        <Socials socials={content.Social}/>
+        <Resume resume={content.Resume}/>
     </>)
 }
 
@@ -78,8 +78,7 @@ async function getContent(page) {
 }
 
 export default async function Page() {
-    const content = await getContent("About")
+    const data = await getContent("About")
     
-    
-    return (<About content={undefined}/>)
+    return (<About content={data}/>)
 }

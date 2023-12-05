@@ -5,7 +5,7 @@ export async function GET(req) {
     const params = req.nextUrl.searchParams
     const query = params.get("query")
 
-    let data = {q: query}
+    let data = {}
     let status = {status: 200}
     if (query === "tabs") {
         data = await db.getTabs()

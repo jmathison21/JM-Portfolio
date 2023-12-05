@@ -5,7 +5,7 @@ function Projects({content}) {
         return <p>content not found</p>
     }
 
-    const projects = content.map((project) => {<Project project={project} />})
+    const projects = content.Projects.map((project) => {<Project project={project} />})
 
     return (<ul>
         {projects}
@@ -15,18 +15,22 @@ function Projects({content}) {
 async function getContent(page) {
     let baseURL = "http://" + process.env.HOSTNAME
     process.env.PORT == 3000 ? baseURL = baseURL + ":" + process.env.PORT : Null
-    const res = await fetch(new URL("/api", baseURL), {headers: {query:"content", page: page}})
+
+    const fetchURL = new URL("/api", baseURL)
+    fetchURL.searchParams.append("query","content")
+    fetchURL.searchParams.append("page", page)
+
+    const res = await fetch(fetchURL, {cache: "no-store"})
 
     if(!res.ok) {
         return undefined
     } 
 
-    return res.json().body
+    return await res.json()
 }
 
-export default function Page() {
-    const content = getContent("Projects")
-    console.log("content", content)
+export default async function Page() {
+    const data = await getContent("Projects")
 
-    return (<Projects content={content}/>)
+    return (<Projects content={data}/>)
 }
