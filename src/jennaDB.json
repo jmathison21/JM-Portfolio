@@ -36,12 +36,12 @@
                 ],
                 "Resume": {
                     "name": "Jenna Mathison Resume",
-                    "link": "",
+                    "link": "https://docs.google.com/document/d/1j4NQP96oti9mu5WRqpFd0ZB-6gXxUNY4ks0XJgJrxQU/edit?usp=sharing",
                     "icon-pdf": "/img/pdf_icon.png",
                     "icon-pdf-alt": "pdf file icon",
                     "icon-docx": "/img/docx_icon.png",
                     "icon-docx-alt": "docx file icon",
-                    "modDate": ""
+                    "modDate": "2023-10-25"
                 }
             }
         },
@@ -53,19 +53,19 @@
                         "name": "Translation Networks",
                         "picture": "",
                         "picture-alt": "",
-                        "description": "",
-                        "content": {
-
-                        }
+                        "description": "Web-based Reference Management Software developed for the U of M Ann-Arbor Asian Languages and Cultures Department. ",
+                        "technologies": "HTML/CSS, JavaScript, SVG.js, jQuery, Node/Express, Jade, AWS S3, MariaDB, U of M Kubernetes Hosting",
+                        "link": "https://www.translationnetworks.com/",
+                        "content": {}
                     },
                     {
                         "name": "Stock Trading Application",
                         "picture": "",
                         "picture-alt": "",
-                        "description": "",
-                        "content": {
-
-                        }
+                        "description": "Command Line Interface based Client-Server Application for buying and selling Stocks stored on a Database",
+                        "technologies": "Python, SQLite, Multithreading, Client-Server, Sockets",
+                        "link": "https://github.com/jmathison21/CIS427-Program",
+                        "content": {}
                     }
                 ]
             }
