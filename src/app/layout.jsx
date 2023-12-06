@@ -25,7 +25,7 @@ export default async function RootLayout({ children }) {
     <html lang="en" >
         <body className="bg-rose-300 min-w-fit h-screen">
             <Header />
-            <main className="flex flex-col items-center h-screen">
+            <main className="flex flex-col items-center h-full">
                 <div className="w-full flex flex-col items-center">
                     <div className="flex flex-col w-5/6 md:w-3/5 lg:w-1/2 p-1 pt-1 items-center bg-rose-200 rounded-xl shadow-md">
                         <div className="w-full h-auto flex flex-row justify-center"><Tabs tabsList={tabsList}/></div>

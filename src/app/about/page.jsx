@@ -2,6 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import db from "src/jennaDB"
 
+
+
 function Bio({bio}) {
     const imgSrc = bio.picture != "" ? bio["picture"] : bio["no-picture"]
     const imgAlt = bio.picture != "" ? bio["picture-alt"] : bio["no-picture-alt"]

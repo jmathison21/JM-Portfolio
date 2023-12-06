@@ -1,6 +1,8 @@
 import Project from "./Project"
 import db from "src/jennaDB"
 
+
+
 function Projects({content}) {
     if(content == null) {
         return <p>content not found</p>

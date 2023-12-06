@@ -1,16 +1,20 @@
 "use client"
 import { useEffect, useState} from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link"
+
+
 
 function TabButton({name, tab, setTab}) {
     return (
-    <Link className={"font-bold flex-grow text-xl py-0 px-4 z-10 text-center rounded-2xl hover:bg-slate-500 duration-100" + (tab == name ? " bg-slate-500" : " bg-transparent")} href={"/" +  name.toLowerCase()} onClick={() => {setTab(name)}}>{name}</Link>
+    <Link className={"font-bold flex-grow text-xl py-0 px-4 z-10 text-center rounded-2xl hover:bg-slate-400 duration-100" + (tab == name ? " bg-slate-400" : " bg-transparent")} href={"/" +  name.toLowerCase()} onClick={() => {setTab(name)}}>{name}</Link>
     )
 }
 
 export default function Tabs({tabsList}) {
     tabsList = tabsList != null ? tabsList : ["None"]
-    const [tab,setTab] = useState(tabsList[0])
+    const pathname = usePathname().split("/")[1]
+    const [tab,setTab] = useState(tabsList.find((name) => name.toLowerCase() == pathname))
     const tabs = tabsList.map(name => <TabButton key={name} name={name} tab={tab} setTab={setTab}/>)
 
     useEffect(() => {
