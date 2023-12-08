@@ -1,9 +1,19 @@
 async function getDB() {
-    const revalidate = process.env.NEXT_PUBLIC_VERCEL_ENV === "development" ? 0 : 3600
-    const dbURL = revalidate != 0 ? process.env.NEXT_PUBLIC_DB_URL : process.env.DEV_DB_URL
-    const res = await fetch(dbURL, {headers: {"Content-Type": "application/json", "Accept": "application/json"}, next:{revalidate: revalidate}})
+    const revalidate =
+        process.env.NEXT_PUBLIC_VERCEL_ENV === "development" ? 0 : 3600
+    const dbURL =
+        revalidate != 0
+            ? process.env.NEXT_PUBLIC_DB_URL
+            : process.env.DEV_DB_URL
+    const res = await fetch(dbURL, {
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        next: { revalidate: revalidate },
+    })
 
-    if(!res.ok) {
+    if (!res.ok) {
         return null
     }
 
@@ -13,11 +23,11 @@ async function getDB() {
 const db = await getDB()
 
 const jdb = {
-    getTabs: function() {
-        const tabs = db.tabs.map(tab => tab.name)
+    getTabs: function () {
+        const tabs = db.tabs.map((tab) => tab.name)
         return tabs
     },
-    getTabContent: function(tab) {
+    getTabContent: function (tab) {
         for (let i = 0; i < db.tabs.length; i++) {
             if (db.tabs[i].name === tab) {
                 return db.tabs[i].content
@@ -25,9 +35,9 @@ const jdb = {
         }
         return "Content Not Found"
     },
-    getDB: function() {
+    getDB: function () {
         return db
-    }
+    },
 }
 
 export default jdb
