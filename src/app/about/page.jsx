@@ -3,13 +3,14 @@ import Link from "next/link"
 import db from "src/jennaDB"
 
 function Bio({ bio }) {
-    const imgSrc = bio.picture != "" ? bio["picture"] : bio["no-picture"]
+    const imgSrc = 
+        bio.picture != "" ? bio["picture"] : bio["no-picture"]
     const imgAlt =
         bio.picture != "" ? bio["picture-alt"] : bio["no-picture-alt"]
 
     return (
-        <div className="flex w-full flex-grow flex-row flex-wrap justify-center md:w-4/5">
-            <div className="w-1/2">
+        <div className="flex w-full flex-grow flex-row flex-wrap justify-center ">
+            <div className="w-2/3">
                 <Image
                     src={imgSrc}
                     alt={imgAlt}
@@ -20,13 +21,13 @@ function Bio({ bio }) {
                     className="h-auto w-full"
                 />
             </div>
-            <div className="flex w-1/2 flex-col items-center p-2 px-5">
+            <div className="flex w-full flex-col items-center p-2 pb-0">
                 <p className="text-center text-lg font-bold">About Me</p>
                 <p className="text-left">{bio.about}</p>
             </div>
-            <div className="flex flex-col items-center p-2">
+            <div className="flex flex-col w-full items-center p-2 pb-0">
                 <p className="text-center text-lg font-bold">Education</p>
-                <p className="text-center">{bio.education}</p>
+                <p className="text-center whitespace-pre-line">{bio.education}</p>
             </div>
         </div>
     )
@@ -41,6 +42,7 @@ function Social({ social }) {
                     height={100}
                     src={social.icon}
                     alt={social["icon-alt"]}
+                    
                 />
                 <Link
                     className="pl-8 text-2xl text-blue-500"
@@ -67,14 +69,17 @@ function Socials({ socials }) {
 
 function Resume({ resume }) {
     return (
-        //<p>Empty Resume</p>
         <div className="flex flex-row rounded-xl bg-white p-2">
-            <Image
-                width={60}
-                height={60}
-                src={resume["icon-pdf"]}
-                alt={resume["icon-pdf-alt"]}
-            />
+            <div className="w-1/3 flex items-center">
+                <Image
+                    width={0}
+                    height={0}
+                    src={resume["icon-pdf"]}
+                    alt={resume["icon-pdf-alt"]}
+                    sizes="100vw"
+                    className="h-auto w-full"
+                />
+            </div>
             <div className="flex flex-col justify-center">
                 <h2 className="text-l font-bold">{resume.name}</h2>
                 <p>Last Modified: {resume.modDate}</p>
