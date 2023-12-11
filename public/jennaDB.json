@@ -53,7 +53,7 @@
                         "name": "Translation Networks",
                         "picture": "",
                         "picture-alt": "",
-                        "description": "Web-based Reference Management Software developed for the U of M Ann-Arbor Asian Languages and Cultures Department. ",
+                        "description": "Web-based Reference Management and Concept Mapping Software developed for the U of M Ann-Arbor Asian Languages and Cultures Department",
                         "technologies": "HTML/CSS, JavaScript, SVG.js, jQuery, Node/Express, Jade, AWS S3, MariaDB, U of M Kubernetes Hosting",
                         "link": "https://www.translationnetworks.com/",
                         "content": {}
