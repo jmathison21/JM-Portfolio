@@ -3,12 +3,12 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 
-function TabButton({ name, tab, setTab}) {
+function TabButton({ name, tab, setTab }) {
     return (
         <Link
             className={
-                "z-10 w-32 rounded-2xl px-4 py-1 text-center text-xl font-bold duration-100 hover:bg-slate-400 " +
-                (tab == name ? " bg-slate-400" : " bg-transparent") 
+                "z-10 w-32 rounded-2xl px-4 py-1 text-center text-xl font-bold duration-100 hover:bg-slate-400 xl:w-36 xl:text-2xl" +
+                (tab == name ? " bg-slate-400" : " bg-transparent")
             }
             href={"/" + name.toLowerCase()}
             onClick={() => {
@@ -27,7 +27,7 @@ export default function Tabs({ tabsList }) {
     )
 
     const tabs = tabsList.map((name) => (
-        <TabButton key={name} name={name} tab={tab} setTab={setTab}/>
+        <TabButton key={name} name={name} tab={tab} setTab={setTab} />
     ))
 
     useEffect(() => {}, [tab, tabs])

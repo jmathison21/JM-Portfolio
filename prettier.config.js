@@ -6,9 +6,7 @@ const config = {
     singleQuote: false,
     bracketSameLine: true,
     endOfLine: "auto",
-    plugins: [
-        'prettier-plugin-tailwindcss'
-    ],
+    plugins: ["prettier-plugin-tailwindcss"],
 }
-  
+
 module.exports = config

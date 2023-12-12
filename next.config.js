@@ -3,17 +3,17 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/portfolio',
-                destination: '/about',
+                source: "/portfolio",
+                destination: "/about",
                 permanent: true,
             },
             {
-                source: '/',
-                destination: '/about',
+                source: "/",
+                destination: "/about",
                 permanent: true,
-            }
+            },
         ]
     },
 }
-   
+
 module.exports = nextConfig
