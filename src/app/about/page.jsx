@@ -8,8 +8,8 @@ function Bio({ bio }) {
         bio.picture != "" ? bio["picture-alt"] : bio["no-picture-alt"]
 
     return (
-        <div className="flex w-full flex-grow flex-row flex-wrap justify-center ">
-            <div className="w-2/3 sm:w-1/3 sm:pl-6 lg:pl-10 xl:pl-14">
+        <div className="flex w-full flex-grow flex-row flex-wrap justify-center space-x-4 lg:space-x-6 xl:space-x-8">
+            <div className="w-40 sm:w-48 xl:w-60 ">
                 <Image
                     src={imgSrc}
                     alt={imgAlt}
@@ -20,11 +20,11 @@ function Bio({ bio }) {
                     className="h-auto w-full"
                 />
             </div>
-            <div className="flex w-full flex-col items-center py-2 sm:w-2/3 sm:px-6 sm:py-0 lg:px-12 xl:px-20">
+            <div className="flex flex-col w-64 items-center py-2 lg:w-72 xl:w-96">
                 <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
                     About Me
                 </p>
-                <p className="text-left lg:text-lg xl:text-xl">{bio.about}</p>
+                <p className="text-left lg:text-lg xl:text-xl px-2">{bio.about}</p>
             </div>
             <div className="flex w-full flex-col items-center py-2 ">
                 <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
@@ -40,7 +40,7 @@ function Bio({ bio }) {
 
 function SectionTitle({text}) {
     return (
-            <h2 className="p-4 text-center text-lg font-bold lg:text-xl xl:text-2xl">
+            <h2 className="p-4 text-center text-lg font-bold lg:py-6 lg:text-xl  xl:text-2xl">
                 {text}
             </h2>
     )
@@ -48,21 +48,23 @@ function SectionTitle({text}) {
 
 function Social({ social }) {
     return (
-        <li className="p-3">
-            <div className="flex flex-row items-center">
+        <div className="flex flex-row items-center bg-white rounded-xl p-3">
+            <div className="w-20">
                 <Image
-                    width={100}
-                    height={100}
+                    width={0}
+                    height={0}
                     src={social.icon}
                     alt={social["icon-alt"]}
+                    sizes="100vw"
+                    className="h-auto w-full"
                 />
-                <Link
-                    className="pl-8 text-2xl text-blue-500"
-                    href={social.link}>
-                    {social.name}
-                </Link>
             </div>
-        </li>
+            <Link
+                className="px-4 text-2xl text-blue-500"
+                href={social.link}>
+                {social.name}
+            </Link>
+        </div>
     )
 }
 
@@ -74,7 +76,7 @@ function Socials({ socials }) {
     return (
         <div className="flex flex-col items-center">
             <SectionTitle text={"Social Media"} />
-            <ul className="">{socialItems}</ul>
+            <div className="grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-3">{socialItems}</div>
         </div>
     )
 }
@@ -84,7 +86,7 @@ function Resume({ resume }) {
         <>
             <SectionTitle text={"Resume"} />
             <div className="flex flex-row rounded-xl bg-white p-2">
-                <div className="flex w-1/3 items-center">
+                <div className="flex w-20 items-center sm:w-24 lg:w-28">
                     <Image
                         width={0}
                         height={0}
@@ -94,9 +96,9 @@ function Resume({ resume }) {
                         className="h-auto w-full"
                     />
                 </div>
-                <div className="flex flex-col justify-center">
-                    <h2 className="text-l font-bold">{resume.name}</h2>
-                    <p>Last Modified: {resume.modDate}</p>
+                <div className="flex flex-col justify-center space-y-1 sm:px-2 lg:px-4">
+                    <h2 className="text-l font-bold sm:text-xl">{resume.name}</h2>
+                    <p className="sm:text-l">Last Modified: {resume.modDate}</p>
                 </div>
             </div>
         </>

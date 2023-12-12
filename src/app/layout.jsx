@@ -31,7 +31,7 @@ export default async function RootLayout({ children }) {
                 <Header />
                 <main className="mb-16 flex w-screen min-w-fit flex-col items-center">
                     <div className="flex w-screen min-w-fit flex-col items-center">
-                        <div className="flex w-5/6 flex-col items-center rounded-xl bg-rose-200 p-1 pt-1 shadow-md ">
+                        <div className="flex w-5/6 flex-col items-center rounded-xl bg-rose-200 p-1 pt-1 shadow-md sm:3/4 xl:w-3/5 2xl:w-1/2">
                             <div className="flex h-auto w-full flex-row justify-center">
                                 <Tabs tabsList={tabsList} />
                             </div>

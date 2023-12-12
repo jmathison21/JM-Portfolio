@@ -10,7 +10,7 @@ function Projects({ content }) {
         return <Project project={project} key={project.name} />
     })
 
-    return <ul className="space-y-4">{projects}</ul>
+    return <ul className="space-y-4 sm:space-y-6">{projects}</ul>
 }
 
 export default async function Page() {
