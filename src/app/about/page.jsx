@@ -21,9 +21,9 @@ function Bio({ bio }) {
             </div>
             <div className="flex flex-col w-64 items-center py-2 sm:w-72 lg:w-96 mx-2">
                 <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
-                    About Me
+                    Who is Jenna?
                 </p>
-                <p className="text-left lg:text-lg xl:text-xl">{bio.about}</p>
+                <p className="text-center lg:text-lg xl:text-xl">{bio.about}</p>
             </div>
             <div className="flex w-full flex-col items-center py-2 ">
                 <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
