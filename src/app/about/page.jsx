@@ -7,8 +7,8 @@ function Bio({ bio }) {
         bio.picture != "" ? bio["picture-alt"] : bio["no-picture-alt"]
 
     return (
-        <div className="flex w-full flex-grow flex-row flex-wrap justify-center space-x-4 lg:space-x-6 xl:space-x-8">
-            <div className="w-40 sm:w-48 xl:w-60 ">
+        <div className="flex w-full flex-grow flex-row flex-wrap justify-center space-x-4 sm:space-x-6 lg:space-x-8 xl:space-x-10">
+            <div className="w-40 sm:w-48 xl:w-60 flex items-center">
                 <Image
                     src={imgSrc}
                     alt={imgAlt}
@@ -19,11 +19,11 @@ function Bio({ bio }) {
                     className="h-auto w-full"
                 />
             </div>
-            <div className="flex flex-col w-64 items-center py-2 lg:w-72 xl:w-96">
+            <div className="flex flex-col w-64 items-center py-2 sm:w-72 lg:w-96 mx-2">
                 <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
                     About Me
                 </p>
-                <p className="text-left lg:text-lg xl:text-xl px-2">{bio.about}</p>
+                <p className="text-left lg:text-lg xl:text-xl">{bio.about}</p>
             </div>
             <div className="flex w-full flex-col items-center py-2 ">
                 <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
