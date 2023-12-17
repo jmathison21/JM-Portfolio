@@ -49,7 +49,7 @@ export default async function RootLayout({ children }) {
 
     return (
         <html lang="en">
-            <body className="min-h-screen overflow-x-hidden bg-rose-300">
+            <body className="min-h-screen overflow-x-hidden overflow-y-scroll bg-rose-300">
                 <Header />
                 <main className="mb-16 flex w-screen min-w-fit flex-col items-center">
                     <div className="flex w-screen min-w-fit flex-col items-center">

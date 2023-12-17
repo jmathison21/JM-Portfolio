@@ -18,28 +18,34 @@
                         "name": "LinkedIn",
                         "link": "https://www.linkedin.com/in/jmathison21/",
                         "icon": "/img/linkedin_icon.png",
-                        "icon-alt": "linkedin icon"
+                        "icon-alt": "linkedin"
                     },
                     {
                         "name": "GitHub",
                         "link": "https://github.com/jmathison21",
                         "icon": "/img/github_icon.png",
-                        "icon-alt": "github icon"
+                        "icon-alt": "github"
                     },
                     {
                         "name": "Instagram",
                         "link": "https://www.instagram.com/jmathison2118/",
                         "icon": "/img/Instagram_icon.png.webp",
-                        "icon-alt": "instagram icon"
+                        "icon-alt": "instagram"
+                    },
+                    {
+                        "name": "Email",
+                        "link": "mailto:jennamath21@gmail.com",
+                        "icon": "/img/email_icon.png",
+                        "icon_alt": "email"
                     }
                 ],
                 "Resume": {
                     "name": "Jenna Mathison Resume",
                     "link": "https://docs.google.com/document/d/1j4NQP96oti9mu5WRqpFd0ZB-6gXxUNY4ks0XJgJrxQU/edit?usp=sharing",
                     "icon-pdf": "/img/pdf_icon.png",
-                    "icon-pdf-alt": "pdf file icon",
+                    "icon-pdf-alt": "pdf file",
                     "icon-docx": "/img/docx_icon.png",
-                    "icon-docx-alt": "docx file icon",
+                    "icon-docx-alt": "docx file",
                     "modDate": "2023-10-25"
                 }
             }
