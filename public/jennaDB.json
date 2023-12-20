@@ -6,7 +6,7 @@
             "name": "About",
             "content": {
                 "Bio": {
-                    "about": "Jenna is a senior at U of M-Dearborn studying Computer Science. She currently works at U of M-Dearborn as a Computer Consultant II for ITS. Jenna is seeking positions as a Web Developer to advance her career in CS and to create useful, inspirational, and helpful applications for users on the Web.",
+                    "about": "Jenna is a senior at U of M-Dearborn studying Computer Science. She currently works at U of M-Dearborn as a Computer Consultant II for ITS. Jenna is seeking positions as a Web Developer to advance her career in CS and to create accessible, useful, inspirational, and helpful applications for users on the Web.",
                     "education": "Bachelor of Science\nComputer Information Science\nUniversity of Michigan-Dearborn\nGraduating Winter 2024\n3.97 GPA",
                     "picture": "",
                     "picture-alt": "",
@@ -56,21 +56,29 @@
                 "Projects": [
                     {
                         "name": "Translation Networks",
-                        "picture": "",
-                        "picture-alt": "",
                         "description": "Web-based Reference Management and Concept Mapping Software developed for the U of M Ann-Arbor Asian Languages and Cultures Department",
                         "technologies": "HTML/CSS, JavaScript, SVG.js, jQuery, Node/Express, Jade, AWS S3, MariaDB, U of M Kubernetes Hosting",
+                        "github": "",
                         "link": "https://www.translationnetworks.com/",
-                        "content": {}
+                        "pictures": [
+
+                        ],
+                        "picture-alts": [
+
+                        ]
                     },
                     {
                         "name": "Stock Trading Application",
-                        "picture": "",
-                        "picture-alt": "",
                         "description": "Command Line Interface based Client-Server Application for buying and selling Stocks stored on a Database",
                         "technologies": "Python, SQLite, Multithreading, Client-Server, Sockets",
-                        "link": "https://github.com/jmathison21/CIS427-Program",
-                        "content": {}
+                        "github": "https://github.com/jmathison21/CIS427-Program",
+                        "link": "",
+                        "pictures": [
+
+                        ],
+                        "picture-alts": [
+
+                        ]
                     }
                 ]
             }

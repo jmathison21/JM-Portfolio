@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Project({ project }) {
-    const image =
+    /*const image =
         project.picture != "" ? (
             <Image
                 src={project.picture}
@@ -13,10 +13,9 @@ export default function Project({ project }) {
             />
         ) : (
             <></>
-        )
+        )*/
     return (
         <li className="flex flex-row space-x-4 rounded-xl bg-white p-3">
-            {image}
             <div className="flex flex-col space-y-2 sm:space-y-3">
                 <h2 className="text-xl font-bold lg:text-2xl">{project.name}</h2>
                 <p className="text-md lg:text-xl">{project.description}</p>

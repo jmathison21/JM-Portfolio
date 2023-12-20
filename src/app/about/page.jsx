@@ -59,7 +59,7 @@ function Social({ social }) {
                 />
             </div>
             <Link
-                className="px-4 text-2xl text-blue-500"
+                className="px-4 text-2xl text-blue-500 hover:underline"
                 href={social.link}>
                 {social.name}
             </Link>
@@ -75,7 +75,7 @@ function Socials({ socials }) {
     return (
         <div className="flex flex-col items-center">
             <SectionTitle text={"Social Media"} />
-            <div className="grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 lg:grid-cols-3">{socialItems}</div>
+            <div className="grid grid-cols-1 grid-rows-auto gap-4 md:grid-cols-2 ">{socialItems}</div>
         </div>
     )
 }
@@ -96,7 +96,7 @@ function Resume({ resume }) {
                     />
                 </div>
                 <div className="flex flex-col justify-center space-y-1 sm:px-2 lg:px-4">
-                    <h2 className="text-l font-bold sm:text-xl">{resume.name}</h2>
+                    <Link href={resume.link} className="text-l font-bold text-blue-500 sm:text-xl hover:underline">{resume.name}</Link>
                     <p className="sm:text-l">Last Modified: {resume.modDate}</p>
                 </div>
             </div>
