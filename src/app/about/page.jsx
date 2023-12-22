@@ -39,7 +39,7 @@ function Bio({ bio }) {
 
 function SectionTitle({text}) {
     return (
-            <h2 className="p-4 text-center text-lg font-bold lg:py-6 lg:text-xl  xl:text-2xl">
+            <h2 className="p-4 text-center text-lg font-bold lg:py-6 lg:text-xl xl:text-2xl">
                 {text}
             </h2>
     )
@@ -59,7 +59,7 @@ function Social({ social }) {
                 />
             </div>
             <Link
-                className="px-4 text-2xl text-blue-500 hover:underline"
+                className="font-bold px-4 text-lg text-blue-500 sm:text-lg lg:text-xl hover:underline"
                 href={social.link}>
                 {social.name}
             </Link>
@@ -84,8 +84,8 @@ function Resume({ resume }) {
     return (
         <>
             <SectionTitle text={"Resume"} />
-            <div className="flex flex-row rounded-xl bg-white p-2">
-                <div className="flex w-20 items-center sm:w-24 lg:w-28">
+            <div className="flex flex-row rounded-xl bg-white p-4 pl-2">
+                <div className="flex w-16 items-center sm:w-20 lg:w-24 xl:w-28">
                     <Image
                         width={0}
                         height={0}
@@ -95,9 +95,9 @@ function Resume({ resume }) {
                         className="h-auto w-full"
                     />
                 </div>
-                <div className="flex flex-col justify-center space-y-1 sm:px-2 lg:px-4">
-                    <Link href={resume.link} className="text-l font-bold text-blue-500 sm:text-xl hover:underline">{resume.name}</Link>
-                    <p className="sm:text-l">Last Modified: {resume.modDate}</p>
+                <div className="flex flex-col justify-center space-y-1 px-1 lg:px-2">
+                    <Link href={resume.link} className="font-bold text-blue-500 sm:text-lg lg:text-xl hover:underline">{resume.name}</Link>
+                    <p className="lg:text-lg">Last Modified: {resume.modDate}</p>
                 </div>
             </div>
         </>
