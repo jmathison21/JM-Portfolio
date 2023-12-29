@@ -3,7 +3,7 @@
     "lastname": "Mathison",
     "tabs": [
         {
-            "name": "About",
+            "name": "Home",
             "content": {
                 "Bio": {
                     "about": "Jenna is a senior at U of M-Dearborn studying Computer Science. She currently works at U of M-Dearborn as a Computer Consultant II for ITS. Jenna is seeking positions as a Web Developer to advance her career in CS and to create accessible, useful, inspirational, and helpful applications for users on the Web.",

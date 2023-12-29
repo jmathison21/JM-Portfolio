@@ -4,13 +4,13 @@ import { usePathname } from "next/navigation"
 import Link from "next/link"
 
 function TabButton({ name, tab, setTab }) {
+    const href = name === "Home" ? "/" : "/" + name.toLowerCase()
     return (
         <Link
             className={
-                "z-10 w-32 rounded-2xl px-4 py-1 text-center text-xl font-bold duration-100 hover:bg-slate-400 xl:w-36 xl:text-2xl" +
-                (tab == name ? " bg-slate-400" : " bg-transparent")
+                "z-10 w-32 rounded-2xl px-4 py-1 text-center text-xl font-bold duration-100 hover:bg-slate-400 xl:w-36 xl:text-2xl"
             }
-            href={"/" + name.toLowerCase()}
+            href={href}
             onClick={() => {
                 setTab(name)
             }}>
@@ -21,19 +21,16 @@ function TabButton({ name, tab, setTab }) {
 
 export default function Tabs({ tabsList }) {
     tabsList = tabsList != null ? tabsList : ["None"]
-    const pathname = usePathname().split("/")[1]
-    const [tab, setTab] = useState(
-        tabsList.find((name) => name.toLowerCase() == pathname)
-    )
+    const [tab, setTab] = useState(tabsList[0])
 
     const tabs = tabsList.map((name) => (
         <TabButton key={name} name={name} tab={tab} setTab={setTab} />
     ))
 
-    useEffect(() => {}, [tab, tabs])
+    //useEffect(() => {}, [tab, tabs])
 
     return (
-        <div className="m-4 flex h-fit w-fit flex-row justify-center space-x-2 rounded-2xl bg-slate-100 shadow-sm">
+        <div className="">
             {tabs}
         </div>
     )
