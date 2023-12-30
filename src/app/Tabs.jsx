@@ -35,7 +35,7 @@ export default function Tabs({ tabsList }) {
     
 
     return (
-        <div className="flex flex-row w-fit space-x-3 m-2 sm:mx-4 lg:mx-8 lg:space-x-6">
+        <div className="flex flex-row w-fit space-x-3 m-3 sm:mx-4 lg:mx-8 lg:space-x-6">
             {tabs}
         </div>
     )
