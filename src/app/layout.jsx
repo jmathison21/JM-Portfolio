@@ -9,7 +9,7 @@ export const metadata = {
 
 function Header({tabsList}) {
     return (
-        <div className="h-16">
+        <div className="flex flex-row h-16 sticky top-0 shadow-md bg-slate-500 border-bottom items-center lg:h-20 xl:h-24">
             <Tabs tabsList={tabsList}/>
         </div>
     )
@@ -36,7 +36,7 @@ export default async function RootLayout({ children }) {
         <html lang="en">
             <body className="">
                 <Header tabsList={tabsList}/>
-                <main className="">
+                <main className="min-h-screen pb-12">
                     {children}
                 </main>
                 <Analytics />

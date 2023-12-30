@@ -8,11 +8,12 @@ function TabButton({ name, tab, setTab }) {
     return (
         <Link
             className={
-                "z-10 w-32 rounded-2xl px-4 py-1 text-center text-xl font-bold duration-100 hover:bg-slate-400 xl:w-36 xl:text-2xl"
+                "z-10 w-fit rounded-full px-4 py-1 text-center text-lg font-bold duration-100 hover:bg-rose-300 lg:text-2xl xl:text-3xl "
+                + (tab === name.toLowerCase() ? "bg-rose-300" : "bg-white")
             }
             href={href}
             onClick={() => {
-                setTab(name)
+                setTab(name.toLowerCase())
             }}>
             {name}
         </Link>
@@ -21,16 +22,20 @@ function TabButton({ name, tab, setTab }) {
 
 export default function Tabs({ tabsList }) {
     tabsList = tabsList != null ? tabsList : ["None"]
-    const [tab, setTab] = useState(tabsList[0])
+    const pathname = usePathname().split("/").pop()
+    console.log(pathname)
+    const [tab, setTab] = useState(
+        pathname == "" ? tabsList[0].toLowerCase() : pathname
+    )
 
     const tabs = tabsList.map((name) => (
         <TabButton key={name} name={name} tab={tab} setTab={setTab} />
     ))
 
-    //useEffect(() => {}, [tab, tabs])
+    
 
     return (
-        <div className="">
+        <div className="flex flex-row w-fit space-x-3 m-2 sm:mx-4 lg:mx-8 lg:space-x-6">
             {tabs}
         </div>
     )
