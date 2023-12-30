@@ -2,13 +2,26 @@ import Image from "next/image"
 import Link from "next/link"
 import {getDB}from "./data"
 
+function NameTitle() {
+    return (<div className="flex flex-col space-y-1 py-8 lg:py-12">
+        <h1 className="w-fit self-center whitespace-nowrap text-center text-3xl font-bold antialiased sm:text-4xl xl:text-5xl">
+            Jenna Mathison
+        </h1>
+        <div className="flex w-full flex-row justify-center space-x-1 pl-4 sm:pl-5">
+            <h2 className="text-l w-fit whitespace-nowrap text-start antialiased sm:text-xl xl:text-2xl">
+                Web Developer | Computer Consultant II
+            </h2>
+        </div>
+    </div>)
+}
+
 function Bio({ bio }) {
     const imgSrc = bio.picture != "" ? bio["picture"] : bio["no-picture"]
     const imgAlt =
         bio.picture != "" ? bio["picture-alt"] : bio["no-picture-alt"]
 
     return (
-        <div className="flex w-full flex-grow flex-row flex-wrap justify-center border-black border-b bg-slate-300 pt-10 pb-4 sm:space-x-6 sm:pt-8 lg:space-x-8 xl:space-x-10">
+        <div className="flex w-full flex-grow flex-row flex-wrap justify-center bg-slate-300 pt-10 pb-4 sm:space-x-6 sm:pt-8 lg:space-x-8 xl:space-x-10">
             <div className="w-40 sm:w-48 xl:w-60 flex items-center">
                 <Image
                     src={imgSrc}
@@ -76,7 +89,7 @@ function Socials({ socials }) {
     return (
         <div className="flex flex-col items-center pb-2">
             <SectionTitle text={"Social Media"} />
-            <div className="grid grid-cols-1 grid-rows-auto gap-4 sm:grid-cols-2 ">{socialItems}</div>
+            <div className="grid grid-cols-1 grid-rows-auto gap-4 sm:grid-cols-2 lg:gap-6">{socialItems}</div>
         </div>
     )
 }
@@ -112,6 +125,7 @@ function About({ content }) {
 
     return (
         <>
+            <NameTitle/>
             <Bio bio={content.Bio} />
             <Socials socials={content.Social} />
             <Resume resume={content.Resume} />
