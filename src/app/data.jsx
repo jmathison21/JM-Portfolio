@@ -1,9 +1,10 @@
 export const getDB = async function() {
+    const env = process.env.NEXT_PUBLIC_VERCEL_ENV
     const revalidate =
-        process.env.NEXT_PUBLIC_VERCEL_ENV === "development" ? 0 : 3600
+        env === "development" ? 0 : 3600
     const dbURL =
         revalidate != 0
-            ? process.env.NEXT_PUBLIC_DB_URL
+            ? (env === "production" ? process.env.NEXT_PUBLIC_DB_URL : process.env.NEXT_PUBLIC_BETA_DB_URL)
             : process.env.DEV_DB_URL
     const res = await fetch(dbURL, {
         headers: {
