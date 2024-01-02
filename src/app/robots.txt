@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+Sitemap: https://jennamat.com/sitemap.xml

@@ -8,8 +8,8 @@ function TabButton({ name, tab, setTab }) {
     return (
         <Link
             className={
-                "z-10 w-fit rounded-full px-4 py-1 text-center text-lg font-bold duration-100 hover:bg-rose-300 lg:text-2xl xl:text-3xl "
-                + (tab === name.toLowerCase() ? "bg-rose-300" : "bg-white")
+                "z-10 w-fit rounded-full px-4 py-1 text-center text-lg font-bold duration-100 hover:bg-rose-400 lg:text-2xl xl:text-3xl "
+                + (tab === name.toLowerCase() ? "bg-rose-400" : "bg-white")
             }
             href={href}
             onClick={() => {
@@ -23,7 +23,6 @@ function TabButton({ name, tab, setTab }) {
 export default function Tabs({ tabsList }) {
     tabsList = tabsList != null ? tabsList : ["None"]
     const pathname = usePathname().split("/").pop()
-    console.log(pathname)
     const [tab, setTab] = useState(
         pathname == "" ? tabsList[0].toLowerCase() : pathname
     )

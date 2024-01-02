@@ -11,41 +11,41 @@
                     "picture": "",
                     "picture-alt": "",
                     "no-picture": "/img/person-placeholder-image.png",
-                    "no-picture-alt": "gray placeholder person image"
+                    "no-picture-alt": "Gray Placeholder Person Image"
                 },
                 "Social": [
                     {
                         "name": "LinkedIn",
                         "link": "https://www.linkedin.com/in/jmathison21/",
                         "icon": "/img/linkedin_icon.png",
-                        "icon-alt": "linkedin"
+                        "icon-alt": "LinkedIn"
                     },
                     {
                         "name": "GitHub",
                         "link": "https://github.com/jmathison21",
                         "icon": "/img/github_icon.png",
-                        "icon-alt": "github"
+                        "icon-alt": "Github"
                     },
                     {
                         "name": "Instagram",
                         "link": "https://www.instagram.com/jmathison2118/",
                         "icon": "/img/Instagram_icon.png.webp",
-                        "icon-alt": "instagram"
+                        "icon-alt": "Instagram"
                     },
                     {
                         "name": "Email",
                         "link": "mailto:jennamath21@gmail.com",
                         "icon": "/img/email_icon.png",
-                        "icon_alt": "email"
+                        "icon-alt": "Email"
                     }
                 ],
                 "Resume": {
                     "name": "Jenna Mathison Resume",
                     "link": "https://docs.google.com/document/d/1j4NQP96oti9mu5WRqpFd0ZB-6gXxUNY4ks0XJgJrxQU/edit?usp=sharing",
                     "icon-pdf": "/img/pdf_icon.png",
-                    "icon-pdf-alt": "pdf file",
+                    "icon-pdf-alt": "PDF File",
                     "icon-docx": "/img/docx_icon.png",
-                    "icon-docx-alt": "docx file",
+                    "icon-docx-alt": "Docx File",
                     "modDate": "2023-10-25"
                 }
             }

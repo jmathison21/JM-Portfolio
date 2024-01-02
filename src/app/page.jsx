@@ -4,13 +4,13 @@ import {getDB}from "./data"
 
 function NameTitle() {
     return (<div className="flex flex-col space-y-1 py-8 lg:py-12">
-        <h1 className="w-fit self-center whitespace-nowrap text-center text-3xl font-bold antialiased sm:text-4xl xl:text-5xl">
+        <h2 className="w-fit self-center whitespace-nowrap text-center text-3xl font-bold antialiased sm:text-4xl xl:text-5xl">
             Jenna Mathison
-        </h1>
+        </h2>
         <div className="flex w-full flex-row justify-center space-x-1 pl-4 sm:pl-5">
-            <h2 className="text-l w-fit whitespace-nowrap text-start antialiased sm:text-xl xl:text-2xl">
+            <h3 className="text-l w-fit whitespace-nowrap text-start antialiased sm:text-xl xl:text-2xl">
                 Web Developer | Computer Consultant II
-            </h2>
+            </h3>
         </div>
     </div>)
 }
@@ -34,15 +34,15 @@ function Bio({ bio }) {
                 />
             </div>
             <div className="flex flex-col w-64 items-center py-2 sm:w-72 lg:w-96 mx-2">
-                <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
+                <h2 className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
                     Who is Jenna?
-                </p>
+                </h2>
                 <p className="text-center lg:text-lg xl:text-xl">{bio.about}</p>
             </div>
             <div className="flex w-full flex-col items-center py-2 sm:pr-6 lg:pr-8 xl:pr-10">
-                <p className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
+                <h2 className="text-center text-lg font-bold lg:text-xl xl:text-2xl">
                     Education
-                </p>
+                </h2>
                 <p className="whitespace-pre-line text-center lg:text-lg xl:text-xl">
                     {bio.education}
                 </p>
@@ -118,7 +118,7 @@ function Resume({ resume }) {
     )
 }
 
-function About({ content }) {
+function Home({ content }) {
     if (content == null) {
         return <p>content not found</p>
     }
@@ -137,5 +137,5 @@ export default async function Page() {
     const db = await getDB()
     const data = db.tabs.find(tab => tab.name === "Home").content
 
-    return <About content={data} />
+    return <Home content={data} />
 }
