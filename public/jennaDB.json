@@ -41,12 +41,12 @@
                 ],
                 "Resume": {
                     "name": "Jenna Mathison Resume",
-                    "link": "https://docs.google.com/document/d/1j4NQP96oti9mu5WRqpFd0ZB-6gXxUNY4ks0XJgJrxQU/edit?usp=sharing",
+                    "link": "https://docs.google.com/document/d/1En1PHFgsZYIjwC7Q9cl3qoP4juCg7sVbwr3SkG2KuXs/edit?usp=sharing",
                     "icon-pdf": "/img/pdf_icon.png",
-                    "icon-pdf-alt": "PDF File",
+                    "icon-pdf-alt": "pdf file",
                     "icon-docx": "/img/docx_icon.png",
-                    "icon-docx-alt": "Docx File",
-                    "modDate": "2023-10-25"
+                    "icon-docx-alt": "docx file",
+                    "modDate": "2023-01-24"
                 }
             }
         },
