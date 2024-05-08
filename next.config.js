@@ -1,13 +1,6 @@
+//@ts-check
+
 /** @type {import('next').NextConfig} */
-
-const cspHeader = `
-    default-src 'self'; 
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com;
-    style-src 'self' 'unsafe-inline';
-    frame-ancestors 'self'; 
-    form-action 'self';
-`
-
 const nextConfig = {
     async headers() {
         return [
@@ -39,5 +32,14 @@ const nextConfig = {
         ]
     },
 }
+
+const cspHeader = `
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com;
+    style-src 'self' 'unsafe-inline';
+    frame-ancestors 'self'; 
+    form-action 'self';
+`
+
 
 module.exports = nextConfig

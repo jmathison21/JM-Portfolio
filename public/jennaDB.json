@@ -1,87 +1,75 @@
 {
-    "firstname": "Jenna",
-    "lastname": "Mathison",
-    "tabs": [
+    "bio": {
+        "firstname": "Jenna",
+        "lastname": "Mathison",
+        "about": "Jenna is a senior at U of M-Dearborn studying Computer Science. She currently works at U of M-Dearborn as a Computer Consultant II for ITS. Jenna is seeking positions as a Web Developer to advance her career in CS and to create accessible, useful, inspirational, and helpful applications for users on the Web.",
+        "education": "Bachelor of Science\nComputer Information Science\nUniversity of Michigan-Dearborn\nGraduating Winter 2024\n3.97 GPA",
+        "picture": "",
+        "picture-alt": "",
+        "no-picture": "/img/person-placeholder-image.png",
+        "no-picture-alt": "Gray Placeholder Person Image"
+    },
+    "socials": [
         {
-            "name": "Home",
-            "content": {
-                "Bio": {
-                    "about": "Jenna is a senior at U of M-Dearborn studying Computer Science. She currently works at U of M-Dearborn as a Computer Consultant II for ITS. Jenna is seeking positions as a Web Developer to advance her career in CS and to create accessible, useful, inspirational, and helpful applications for users on the Web.",
-                    "education": "Bachelor of Science\nComputer Information Science\nUniversity of Michigan-Dearborn\nGraduating Winter 2024\n3.97 GPA",
-                    "picture": "",
-                    "picture-alt": "",
-                    "no-picture": "/img/person-placeholder-image.png",
-                    "no-picture-alt": "Gray Placeholder Person Image"
-                },
-                "Social": [
-                    {
-                        "name": "LinkedIn",
-                        "link": "https://www.linkedin.com/in/jmathison21/",
-                        "icon": "/img/linkedin_icon.png",
-                        "icon-alt": "LinkedIn"
-                    },
-                    {
-                        "name": "GitHub",
-                        "link": "https://github.com/jmathison21",
-                        "icon": "/img/github_icon.png",
-                        "icon-alt": "Github"
-                    },
-                    {
-                        "name": "Instagram",
-                        "link": "https://www.instagram.com/jmathison2118/",
-                        "icon": "/img/Instagram_icon.png.webp",
-                        "icon-alt": "Instagram"
-                    },
-                    {
-                        "name": "Email",
-                        "link": "mailto:jennamath21@gmail.com",
-                        "icon": "/img/email_icon.png",
-                        "icon-alt": "Email"
-                    }
-                ],
-                "Resume": {
-                    "name": "Jenna Mathison Resume",
-                    "link": "https://docs.google.com/document/d/1En1PHFgsZYIjwC7Q9cl3qoP4juCg7sVbwr3SkG2KuXs/edit?usp=sharing",
-                    "icon-pdf": "/img/pdf_icon.png",
-                    "icon-pdf-alt": "pdf file",
-                    "icon-docx": "/img/docx_icon.png",
-                    "icon-docx-alt": "docx file",
-                    "modDate": "2023-01-24"
-                }
-            }
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/jmathison21/",
+            "icon": "/img/linkedin_icon.png",
+            "icon-alt": "LinkedIn"
         },
         {
-            "name": "Projects",
-            "content": {
-                "Projects": [
-                    {
-                        "name": "Translation Networks",
-                        "description": "Web-based Reference Management and Concept Mapping Software developed for the U of M Ann-Arbor Asian Languages and Cultures Department",
-                        "technologies": "HTML/CSS, JavaScript, SVG.js, jQuery, Node/Express, Jade, AWS S3, MariaDB, U of M Kubernetes Hosting",
-                        "github": "",
-                        "link": "https://www.translationnetworks.com/",
-                        "pictures": [
+            "name": "GitHub",
+            "link": "https://github.com/jmathison21",
+            "icon": "/img/github_icon.png",
+            "icon-alt": "Github"
+        },
+        {
+            "name": "Instagram",
+            "link": "https://www.instagram.com/jmathison2118/",
+            "icon": "/img/Instagram_icon.png.webp",
+            "icon-alt": "Instagram"
+        },
+        {
+            "name": "Email",
+            "link": "mailto:jennamath21@gmail.com",
+            "icon": "/img/email_icon.png",
+            "icon-alt": "Email"
+        }
+    ],
+    "resume": {
+        "name": "Jenna Mathison Resume",
+        "link": "https://docs.google.com/document/d/1En1PHFgsZYIjwC7Q9cl3qoP4juCg7sVbwr3SkG2KuXs/edit?usp=sharing",
+        "icon-pdf": "/img/pdf_icon.png",
+        "icon-pdf-alt": "pdf file",
+        "icon-docx": "/img/docx_icon.png",
+        "icon-docx-alt": "docx file",
+        "modDate": "2024-05-08"
+    },
+    "projects": [
+        {
+            "name": "Translation Networks",
+            "description": "Web-based Reference Management and Concept Mapping Software developed for the U of M Ann-Arbor Asian Languages and Cultures Department",
+            "technologies": "HTML/CSS, JavaScript, SVG.js, jQuery, Node/Express, Jade, AWS S3, MariaDB, U of M Kubernetes Hosting",
+            "github": "",
+            "link": "https://www.translationnetworks.com/",
+            "pictures": [
 
-                        ],
-                        "picture-alts": [
+            ],
+            "picture-alts": [
 
-                        ]
-                    },
-                    {
-                        "name": "Stock Trading Application",
-                        "description": "Command Line Interface based Client-Server Application for buying and selling Stocks stored on a Database",
-                        "technologies": "Python, SQLite, Multithreading, Client-Server, Sockets",
-                        "github": "https://github.com/jmathison21/CIS427-Program",
-                        "link": "",
-                        "pictures": [
+            ]
+        },
+        {
+            "name": "Stock Trading Application",
+            "description": "Command Line Interface based Client-Server Application for buying and selling Stocks stored on a Database",
+            "technologies": "Python, SQLite, Multithreading, Client-Server, Sockets",
+            "github": "https://github.com/jmathison21/CIS427-Program",
+            "link": "",
+            "pictures": [
 
-                        ],
-                        "picture-alts": [
+            ],
+            "picture-alts": [
 
-                        ]
-                    }
-                ]
-            }
+            ]
         }
     ]
 }
