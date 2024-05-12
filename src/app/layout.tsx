@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
+import { LayoutProps } from ".next/types/app/layout"
 
 export const metadata: Metadata = {
     title: "Jenna Mathison",
@@ -19,8 +20,7 @@ export const metadata: Metadata = {
 }
 
 
-export default function RootLayout({ children }) {
-
+export default function RootLayout({ children }: LayoutProps) {
     return (
         <html lang="en">
             <body className="">
