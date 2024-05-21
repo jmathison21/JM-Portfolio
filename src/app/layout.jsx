@@ -5,15 +5,13 @@ import {getDB}from "./data"
 
 export const metadata = {
     title: "Jenna Mathison",
-    description: "Portfolio Website for Jenna Mathison showcasing her experience as a Student and Web Developer",
+    description: "Portfolio Website for Jenna Mathison showcasing her experience and projects as a University of Michigan - Dearborn Graduate and Software Developer",
     metadataBase: new URL("https://jennamat.com"),
+    authors: [{name: "Jenna Mathison"}],
     referrer: "origin-when-cross-origin",
-    "X-XSS-Protection": 1,
-    "X-Frame-Options": "SAMEORIGIN",
-    "X-Content-Type-Options": "nosniff",
     openGraph: {
         title: "Jenna Mathison Portfolio",
-        description: "Portfolio Website for Jenna Mathison showcasing her experience as a Student and Web Developer",
+        description: "Portfolio Website for Jenna Mathison showcasing her experience and projects as a University of Michigan - Dearborn Graduate and Software Developer",
         url: "https://jennamat.com",
         siteName: "Jenna Mathison",
         locale: "en_US",

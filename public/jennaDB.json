@@ -6,8 +6,8 @@
             "name": "Home",
             "content": {
                 "Bio": {
-                    "about": "Jenna is a senior at U of M-Dearborn studying Computer Science. She currently works at U of M-Dearborn as a Computer Consultant II for ITS. Jenna is seeking positions as a Web Developer to advance her career in CS and to create accessible, useful, inspirational, and helpful applications for users on the Web.",
-                    "education": "Bachelor of Science\nComputer Information Science\nUniversity of Michigan-Dearborn\nGraduating Winter 2024\n3.97 GPA",
+                    "about": "Jenna graduated from U of M - Dearborn with a Bachelor's degree in Computer Science. She currently works at U of M - Dearborn as a Computer Consultant II for ITS. Jenna is seeking positions as a Software Developer to advance her career in CS and to create accessible, useful, inspirational, and helpful applications for users on the Web.",
+                    "education": "Bachelor of Science\nComputer Information Science\nUniversity of Michigan-Dearborn\nGraduated Winter 2024\n3.97 GPA",
                     "picture": "",
                     "picture-alt": "",
                     "no-picture": "/img/person-placeholder-image.png",
@@ -41,12 +41,12 @@
                 ],
                 "Resume": {
                     "name": "Jenna Mathison Resume",
-                    "link": "https://docs.google.com/document/d/1j4NQP96oti9mu5WRqpFd0ZB-6gXxUNY4ks0XJgJrxQU/edit?usp=sharing",
+                    "link": "https://docs.google.com/document/d/1En1PHFgsZYIjwC7Q9cl3qoP4juCg7sVbwr3SkG2KuXs/edit?usp=sharing",
                     "icon-pdf": "/img/pdf_icon.png",
                     "icon-pdf-alt": "PDF File",
                     "icon-docx": "/img/docx_icon.png",
                     "icon-docx-alt": "Docx File",
-                    "modDate": "2023-10-25"
+                    "modDate": "2024-05-13"
                 }
             }
         },
